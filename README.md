@@ -22,13 +22,6 @@ From here, they view all the recent donations they have received, generate a QR 
 
 From this dashboard, they can one-click right to the KyberSwap Widget portals to sell only on the parameter that they receive the full 100% of the minimum threshhold for the token (default on KyberSwap Widget is 97%).
 
-To-Do:
-
-A how to use Kyber Swap:
-
-Set parameters to at least 99%.
-
-
 
 If tokens are unsold, we don&#39;t want the charity to panic, nor do we want to worry if Kyber doesn&#39;t support some of the tokens that we have collected during charity.
 
@@ -37,8 +30,6 @@ If tokens are unsold, we don&#39;t want the charity to panic, nor do we want to 
 This is where we pass on the token Symbols &amp; corresponding token contract addresses to Set Protocol.
 
 We then create a &quot;Lightpool&quot; of bundled token transactions that can be auctioned off in a set at a slight discount to the calculated marketprice, using Cryptocompare&#39;s API as an oracle. The discount is structured in the form of a rebate out to a verified address of the charity of one&#39;s choice.
-
-.
 
 Sample URL:
 
