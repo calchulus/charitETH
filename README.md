@@ -1,5 +1,4 @@
-CharitETH
-Helping Charities Handle ERC20s Better
+CharitETH - Helping Charities Handle ERC20s Better
 
 Problems Addressed:
 
