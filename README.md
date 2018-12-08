@@ -1,3 +1,8 @@
+CharitETH
+Helping Charities Handle ERC20s Better
+
+Problems Addressed:
+
 1. Charities receive ERC20s, but have fiat expenses.
 2. Charities may not be very well-versed in crypto, and have a hard time converting it to usable currencies.
   1. We don&#39;t want any fat finger sales, or individuals not understanding the difference between market and limit orders, selling down a thin orderook.
