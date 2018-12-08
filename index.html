@@ -29,8 +29,12 @@
 		</fieldset>
 		 
   </form>
-  
-  <button style="text-align: center" class="pure-button" onclick="location.href='home.html';" style="font-size: 20px;" id="submit"> Check ERCs </button>
+  <script>
+	   var address = document.getElementById("wallet").value; 
+	   	   localStorage.setItem("storedWallet",address);
+	   </script>
+
+  <button style="text-align: center" class="pure-button" onclick="location.href='home.html#' + address;"style="font-size: 20px;" id="submit"> Check ERCs </button>
    </div>
 	</body>
 	
