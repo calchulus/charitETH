@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ETHSG Submission</title>
+</head>
+
+<script>
+function subset(coinliststring, level){
+var coinlist = coinliststring.trim().split(',');
+	
+var combi = [];
+var coinpaired = [];
+var letLen = Math.pow(2, coinlist.length);
+
+for (var i = 0; i < letLen ; i++){
+    coinpaired = [];
+    for (var j=0;j<coinlist.length;j++) {
+        if ((i & Math.pow(2,j))){ 
+            coinpaired.push(coinlist[j])
+        }
+    }
+    if (coinpaired.length>=level) {
+        combi.push(coinpaired);
+    }
+}
+console.log(combi.join("\n"));
+// console.log(combi.join("\n"));
+document.getElementById("output").innerHTML = combi.join(" | ");
+document.getElementById("num_outcomes").innerHTML  = combi.length;
+};
+	
+function holdsfunc(holdingsliststring,coinliststring,valuesliststring){
+
+var holdlist = holdingsliststring.toLowerCase().split(',').map(function(item) {
+return item.trim();
+});	
+console.log(holdlist);
+var coinlist = coinliststring.toLowerCase().split(',').map(function(item) {
+return item.trim();
+});
+console.log(coinlist);
+		var valueslist = valuesliststring.toLowerCase().split(',').map(function(item) {
+return item.trim();
+});	
+
+var jsonArray = [];
+
+	var matchlist = []
+		
+jsonArray = holdlist.map(i => {
+   return { 'name': i.trim(), 'matched': coinlist.includes(i) };
+});
+		
+	for (var i=0; i<jsonArray.length; i++){
+		if (jsonArray[i]["matched"] == true) {
+			matchlist.push(jsonArray[i]['name'])
+		}
+	}	
+		console.log(matchlist);
+		
+document.getElementById("holds").innerHTML  = JSON.stringify(jsonArray);
+
+		document.getElementById("matches").innerHTML  = matchlist;
+var amountlist = []
+		if (matchlist.length != 0){
+	for (var i=0; i < matchlist.length; i++){
+		for (var j=0; j < holdlist.length; j++) {
+			if (matchlist[i] ==holdlist[j]){
+				amountlist.push(valueslist[j])
+			}
+		}
+	}	
+		}
+//console.log(jsonArray);
+	}
+	</script>
+
+
+<body>
+
+<input id="coinlist" placeholder="comma separated list of coins you like"> 
+<input id="diversitylevel" value="2" placeholder="2">
+<button onclick="subset(coinlist.value, diversitylevel.value)">Run Possible Pairs</button>
+<p style="display:inline block" id="num_outcomes"></p> <p style="display:inline block" id="output"></p>
+
+
+
+<div>
+	<h6>Charity Holdings</h6>
+	<input id="holdingslist" placeholder="comma separated list of coins charity has">
+	<input id="valueslist" placeholder="comma separated list of coins charity has">
+
+<button onclick="holdsfunc(holdingslist.value, coinlist.value, valueslist.value)">Run Matches</button>
+
+
+<p>Below this is a JSON output of an API that returns if there are any matches</p>
+ <p id="holds"></p>
+ 
+ <p id="matches"></p>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+<!--
+<div>
+	<input id="charityaddress" value="0xabc">
+<button onclick="copyMe()">Copy text</button>
+</div>
+-->
+
+
+
+<script>
+function copyMe() {
+  /* Get the text field */
+  var copyText = document.getElementById("charityaddress");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the following address: " + copyText.value);
+}
+</script>
