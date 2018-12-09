@@ -4,7 +4,7 @@ Problems Addressed:
 
 1. Charities receive ERC20s, but have fiat expenses.
 2. Charities may not be very well-versed in crypto, and have a hard time converting it to usable currencies.
-  1. We don&#39;t want any fat finger sales, or individuals not understanding the difference between market and limit orders, selling down a thin orderook.
+  1. We don&#39;t want any fat finger sales, or individuals not understanding the difference between market and limit orders, selling down a thin orderbook.
 3. The lag time between fundraising and completion means that charities are exposed to underlying risk on the coins they own.
 4. Individuals want to donate crypto, but don&#39;t want downward selling pressure on their favorite coin when it gets to the hands of the charity 
 
@@ -16,7 +16,7 @@ Each of these factors leads to less than 100% of the money donated actually reac
 
 Solution:
 
-a one-stop portal for charities to input their Ethereum address and manage their crypto contriutions.
+a one-stop portal for charities to input their Ethereum address and manage their crypto contributions.
 
 From here, they view all the recent donations they have received, generate a QR code to collect more donations, and liquidate into stable assets that they can actually use within their jurisdictions.
 
