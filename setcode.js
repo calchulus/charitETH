@@ -1,5 +1,6 @@
-
-
+const Web3 = require('web3')
+const BN = require('bignumber.js')
+const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io"))
 
 /**
  * Approve all component tokens for transfer to the Set Protocol contracts
@@ -13,7 +14,7 @@ const approveTokensForTransfer = (tokenAddresses) => {
 };
 
 //Adding some ropsten addresses	
-	
+//	This isere we want to add more
 const trueUSDAddress = '0x02Ca5A9c33585C06336481559FB0eadd3d656324';
 const daiAddress = '0xb224a70ef6ee268cb0dadb6c06a95e3b8040793d';
 

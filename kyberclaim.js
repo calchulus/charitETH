@@ -2,7 +2,7 @@ const Web3 = require('web3')
 const BN = require('bignumber.js')
 const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io"))
 
-var WALLET_ADDRESS = "YOUR_WALLET_ADDRESS" //Eg. "0x8640d5a5c11782ea9cc63833843a7b8f8911d568"
+var WALLET_ADDRESS = "0x8640d5a5c11782ea9cc63833843a7b8f8911d568"
 var SENDER_ADDRESS_PRIVATE_KEY = "YOUR_SENDER_ADDRESS_PRIVATE_KEY"
 SENDER_ACCOUNT = web3.eth.accounts.privateKeyToAccount(SENDER_ADDRESS_PRIVATE_KEY)
 
