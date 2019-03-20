@@ -1,5 +1,7 @@
 CharitETH - Helping Charities Handle ERC20s Better
 
+<table border="0"><tr>  <td><a href="https://gittron.me/bots/0xb0f929bdc1fde9be234e886f09c51127"><img src="https://s3.amazonaws.com/od-flat-svg/0xb0f929bdc1fde9be234e886f09c51127.png" alt="gittron" width="50"/></a></td><td><a href="https://gittron.me/bots/0xb0f929bdc1fde9be234e886f09c51127">SUPPORT US WITH GITTRON</a></td></tr></table>
+
 Problems Addressed:
 
 1. Charities receive ERC20s, but have fiat expenses.
